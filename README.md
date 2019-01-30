@@ -7,3 +7,7 @@
 ### 开源协议：MIT
 
 ### 技术支持微信：蜷缩的蜗牛
+
+[小程序网易云音乐后端接口](https://github.com/kbsonlong/netmusic-node)
+
+![小程序](https://www.alongparty.cn/img/alongparty.png)
