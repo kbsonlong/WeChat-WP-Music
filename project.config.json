@@ -12,7 +12,6 @@
 	"libVersion": "2.2.0",
 	"appid": "wx2bc302a282b5c4ae",
 	"projectname": "%E8%9C%B7%E7%BC%A9%E7%9A%84%E8%9C%97%E7%89%9B",
-	"miniprogramRoot": "./",
 	"condition": {
 		"search": {
 			"current": -1,

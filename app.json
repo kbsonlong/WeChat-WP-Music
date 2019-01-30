@@ -12,12 +12,26 @@
         "pages/webpage/webpage",
         "pages/comments/comments",
         "pages/poster/poster",
-        "music/login/login",
-        "music/audio/audio",
-        "music/main/main",
-        "music/playList/playList",
-        "music/index/index",
-        "music/logs/logs"
+        "page/component/home/index",
+        "page/component/user/index",
+        "page/component/playlist/index",
+        "page/component/mv/index",
+        "page/component/playing/index",
+        "page/component/login/index",
+        "page/component/fm/index",
+        "page/component/toplist/index",
+        "page/component/recommend/index",
+        "page/component/search/index",
+        "page/component/album/index",
+        "page/component/artist/index",
+        "page/component/recsongs/index",
+        "page/component/record/index",
+        "page/component/me/index",
+        "page/component/cloud/index",
+        "page/component/program/index",
+        "page/component/djradio/index",
+        "page/component/simi/index",
+        "page/component/new/index"
     ],
     "window": {
         "backgroundTextStyle": "dark",
@@ -29,7 +43,7 @@
     "tabBar": {
         "color": "#9BABBA",
         "selectedColor": "#222",
-        "borderStyle": "gray",
+        "borderStyle": "black",
         "backgroundColor": "#fefefe",
         "list": [
             {
@@ -48,13 +62,19 @@
                 "pagePath": "pages/readlog/readlog",
                 "iconPath": "images/tar-person.png",
                 "selectedIconPath": "images/tar-person-on-2.png",
-                "text": "我的"
+                "text": "我的博客"
             },
             {
-              "pagePath": "music/login/login",
-              "iconPath": "images/tar-person.png",
-              "selectedIconPath": "images/tar-person-on-2.png",
-              "text": "音乐厅"
+              "pagePath": "page/component/home/index",
+              "iconPath": "image/cm2_btm_icn_discovery.png",
+              "selectedIconPath": "image/cm2_btm_icn_discovery_prs.png",
+              "text": "发现音乐"
+            },
+            {
+              "pagePath": "page/component/me/index",
+              "iconPath": "image/cm2_btm_icn_music.png",
+              "selectedIconPath": "image/cm2_btm_icn_music_prs.png",
+              "text": "网易云音乐"
             }
             
         ]

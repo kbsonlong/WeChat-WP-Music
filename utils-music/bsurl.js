@@ -1,0 +1,1 @@
+module.exports="https://music.alongparty.cn/v1/"
