@@ -67,13 +67,13 @@
             {
               "pagePath": "page/component/home/index",
               "iconPath": "image/cm2_btm_icn_discovery.png",
-              "selectedIconPath": "image/cm2_btm_icn_discovery_prs.png",
+              "selectedIconPath": "image/cm2_btm_icn_discovery.png",
               "text": "发现音乐"
             },
             {
               "pagePath": "page/component/me/index",
               "iconPath": "image/cm2_btm_icn_music.png",
-              "selectedIconPath": "image/cm2_btm_icn_music_prs.png",
+              "selectedIconPath": "image/cm2_btm_icn_music.png",
               "text": "网易云音乐"
             }
             
