@@ -1,12 +1,13 @@
 /*
  * 
  * WordPres版微信小程序
- * Original author: jianbo
- * Secondary development：蜷缩的蜗牛 www.alongparty.cn
- * 技术支持微信号：蜷缩的蜗牛
+ * author: kbsonlong
+ * organization: 蜷缩的蜗牛  www.alongparty.cn
+ * github:    https://github.com/kbsonlong/WeChat-WP-Music
+ * 技术支持微信号：kbsonlong
  * 开源协议：MIT
- * Copyright (c) 2017 https://www.alongparty.cn All rights reserved.
- *
+ * 
+ *  *Copyright (c) 2017 https://www.alongparty.cn All rights reserved.
  */
 
 var Api = require('../../utils/api.js');
@@ -69,7 +70,7 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      title: '' + config.getWebsiteName +' - 专注于自媒体小程序开发与定制',
+      title: '“' + config.getWebsiteName+'”网站微信小程序,基于WordPress版小程序构建.技术支持：www.alongparty.cn',
       path: 'pages/index/index',
       success: function (res) {
         // 转发成功
@@ -83,14 +84,15 @@ Page({
     var self = this;
     self.setData({
       showerror: "none",
-      showallDisplay:"none",
+      showallDisplay:"block",
       displaySwiper:"none",
       floatDisplay:"none",
       isLastPage:false,
-      page:0,
+      page:1,
       postsShowSwiperList:[]
     });
     this.fetchTopFivePosts(); 
+    this.fetchPostsData(self.data);
     
   },
   onReachBottom: function () {  
@@ -110,7 +112,8 @@ Page({
   },
   onLoad: function (options) {
     var self = this; 
-    this.fetchTopFivePosts();
+    self.fetchTopFivePosts();
+    self.fetchPostsData(self.data);
     self.setData({
         topNav: config.getIndexNav
 
@@ -128,7 +131,7 @@ Page({
     getPostsRequest.then(response => {
         if (response.data.status =='200' && response.data.posts.length > 0) {
                 self.setData({
-                    postsShowSwiperList: response.data.posts,
+                    // postsShowSwiperList: response.data.posts,
                     postsShowSwiperList: self.data.postsShowSwiperList.concat(response.data.posts.map(function (item) {
                         //item.firstImage = Api.getContentFirstImage(item.content.rendered);
                         if (item.post_medium_image_300 == null || item.post_medium_image_300 == '') {
@@ -141,28 +144,19 @@ Page({
 
                         }
                         return item;
-                    })),
-                    showallDisplay: "block",
+                    })),                    
                     displaySwiper: "block"
                 });
                 
             }
             else {
                 self.setData({
-                    displaySwiper: "none",
-                    displayHeader: "block",
-                    showallDisplay: "block",
-
+                    displaySwiper: "none"  
                 });
                 
             }
      
-    })
-        .then(response=>{
-            self.fetchPostsData(self.data);
-
-        })
-        .catch(function (response){
+    }).catch(function (response){
             console.log(response); 
             self.setData({
                 showerror: "block",

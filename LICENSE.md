@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2017 Jianbo & 蜷缩的蜗牛
+Copyright (c) 2017 kbsonlong
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

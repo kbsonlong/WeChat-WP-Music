@@ -1,12 +1,12 @@
 /*
  * 
  * WordPres版微信小程序
- * Original author: jianbo
- * Secondary development：蜷缩的蜗牛 www.alongparty.cn
- * 技术支持微信号：蜷缩的蜗牛
+ * author: kbsonlong
+ * organization: 蜷缩的蜗牛  www.alongparty.cn
+ * github:    https://github.com/kbsonlong/WeChat-WP-Music
+ * 技术支持微信号：kbsonlong
  * 开源协议：MIT
  * Copyright (c) 2017 https://www.alongparty.cn All rights reserved.
- *
  */
 
 function formatTime(date) {
@@ -251,32 +251,24 @@ function drawTitleExcerpt(context, title, excerpt) {
         context.fillText(title.substring(0, 19), 40, 460);
         context.fillText(title.substring(19, 36), 40, 510);
     }
-
     context.setFontSize(24);
     context.setTextAlign('left');
-    context.setGlobalAlpha(0.7);
-    
+    context.setGlobalAlpha(0.7);    
     for (var i = 0; i <= 50; i += 20) {
         //摘要只绘制前50个字，这里是用截取字符串
         if (getStrLength(excerpt)>50)
         {
             if ( i == 40) {
                 context.fillText(excerpt.substring(i, i + 20) + "...", 40, 570 + i * 2);
-
             }
             else {
                 context.fillText(excerpt.substring(i, i + 20), 40, 570 + i * 2);
             }
-
         }
         else
         {
             context.fillText(excerpt.substring(i, i + 20), 40, 570 + i * 2);
         }
-        
-        
-
-
     }
 
     context.stroke();

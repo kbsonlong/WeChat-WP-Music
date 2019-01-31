@@ -1,17 +1,16 @@
 /*
  * 
  * WordPres版微信小程序
- * Original author: jianbo
- * Secondary development：蜷缩的蜗牛 www.alongparty.cn
- * 技术支持微信号：蜷缩的蜗牛
+ * author: kbsonlong
+ * organization: 蜷缩的蜗牛  www.alongparty.cn
+ * github:    https://github.com/kbsonlong/WeChat-WP-Music
+ * 技术支持微信号：kbsonlong
  * 开源协议：MIT
  * Copyright (c) 2017 https://www.alongparty.cn All rights reserved.
- *
  */
 
 
-import config from 'config.js'
-
+import config from 'config.js';
 var domain = config.getDomain;
 var pageCount = config.getPageCount;
 var categoriesID = config.getCategoriesID;
@@ -236,32 +235,40 @@ module.exports = {
       return url;
   },
 
+  //鼓励,获取支付密钥
+  postPraiseUrl() { 
+    var url = HOST_URI_WATCH_LIFE_JSON;  
+    url += "payment";
+    return url;
+  },
+
+  //更新鼓励数据
+  updatePraiseUrl() {
+    var url = HOST_URI_WATCH_LIFE_JSON;
+    url += "post/praise";
+    return url;
+  },
+
+  //获取我的鼓励数据
+  getMyPraiseUrl(openid) {
+      var url = HOST_URI_WATCH_LIFE_JSON;
+      url += "post/mypraise?openid=" + openid;
+      return url;
+  },
+
+  //获取所有的鼓励数据
+  getAllPraiseUrl() {
+      var url = HOST_URI_WATCH_LIFE_JSON;
+      url += "post/allpraise";
+      return url;
+  },
+
   //发送模版消息
   sendMessagesUrl() {
       var url = HOST_URI_WATCH_LIFE_JSON;
       url += "weixin/sendmessage";
       return url;
   },
-    //更新赞赏数据
-    updatePraiseUrl() {
-        var url = HOST_URI_WATCH_LIFE_JSON;
-        url += "post/praise";
-        return url;
-    },
-
-    //获取我的赞赏数据
-    getMyPraiseUrl(openid) {
-        var url = HOST_URI_WATCH_LIFE_JSON;
-        url += "post/mypraise?openid=" + openid;
-        return url;
-    },
-
-    //获取所有的赞赏数据
-    getAllPraiseUrl() {
-        var url = HOST_URI_WATCH_LIFE_JSON;
-        url += "post/allpraise";
-        return url;
-    },
   //获取订阅的分类
   getSubscription() {
       var url = HOST_URI_WATCH_LIFE_JSON;
@@ -291,13 +298,12 @@ module.exports = {
   },
   //获取海报
   getPosterUrl() {
-      var url = 'https://' + domain + "/wp-content/plugins/wp-rest-api-for-app/poster/";
+      var url = 'https://' + domain + "/wp-content/plugins/rest-api-to-miniprogram/poster/";
       return url;
   },
   //获取二维码
   getPosterQrcodeUrl() {
-      var url = 'https://' + domain + "/wp-content/plugins/wp-rest-api-for-app/qrcode/";
+      var url = 'https://' + domain + "/wp-content/plugins/rest-api-to-miniprogram/qrcode/";
       return url;
   }
-
 };

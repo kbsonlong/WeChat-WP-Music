@@ -1,12 +1,12 @@
 /*
  * 
  * WordPres版微信小程序
- * Original author: jianbo
- * Secondary development：蜷缩的蜗牛 www.alongparty.cn
- * 技术支持微信号：蜷缩的蜗牛
+ * author: kbsonlong
+ * organization: 蜷缩的蜗牛  www.alongparty.cn
+ * github:    https://github.com/kbsonlong/WeChat-WP-Music
+ * 技术支持微信号：kbsonlong
  * 开源协议：MIT
  * Copyright (c) 2017 https://www.alongparty.cn All rights reserved.
- *
  */
 
 .index-container {
@@ -28,7 +28,6 @@
 swiper.index-swiper {
   position: relative;
   height: 420rpx;
-  padding: 24rpx;
 }
 
 swiper .swiper-mask {
@@ -59,7 +58,7 @@ swiper .swiper-desc {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: 26rpx;
+  font-size: 30rpx;
  /* height: 120rpx; */
   text-shadow: 0px 0px 16px #646d75;
 }
@@ -74,12 +73,12 @@ swiper .swiper-desc {
   background-color: #fff !important;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  border-top-right-radius: 60px;
-  border-bottom-right-radius: 60px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
   color: #296fd0 !important;
   width: 20%;
   margin: 0 !important;
-  /* box-shadow: 1px 1px 6px #ecf0f0;*/
+  box-shadow: 1px 1px 6px #ecf0f0;
 }
 
 .search-button icon {
@@ -93,8 +92,8 @@ swiper .swiper-desc {
   min-height: 1rem;
   font-size: 30rpx;
   /*  position: absolute;*/
-  border-bottom-left-radius: 60px;
-  border-top-left-radius: 60px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   /* border: 1px solid #ededed;  */
@@ -102,7 +101,7 @@ swiper .swiper-desc {
   height: 48rpx;
   width: 80%;
   text-align: left;
-  /* box-shadow: 1px 1px 6px #ecf0f0;*/
+  box-shadow: 1px 1px 6px #ecf0f0;
 }
 
 .share-button {
@@ -116,9 +115,8 @@ swiper .swiper-desc {
 .search-pancel {
   display: flex;
   flex-direction: row;
-  /* margin-top: 8px; */
-  padding: 24rpx;
-  background: #BB4E55;
+  background-color: #eee;
+  padding: 24rpx 24rpx;
 }
 
 .search-pancel image {
@@ -131,22 +129,26 @@ swiper .swiper-desc {
 
 .top-Nav{
 display: flex;
-padding: 35rpx 20rpx 25rpx;
+padding: 24rpx 0;
 background: #fff;
 justify-content:space-around;
+/* border-bottom: 1px solid #eee; */
 }
+
 .top-item{
 text-align: center;
 }
+
 .top-item image{
-/* width: 58rpx;
-height: 58rpx; */
-width: 60rpx;
-height: 60rpx;
+width: 88rpx;
+height: 88rpx;
 }
+
 .top-item text{
 line-height: 20rpx;
-font-size: 14px;
+font-size: 28rpx;
+color: #4c4c4c;
+font-weight: 500;
 }
 
 
@@ -159,5 +161,51 @@ font-size: 14px;
   padding: 0;
   top:0;
   left: 0;
+}
 
+
+
+.top-Nav2 {
+  display: flex;
+  flex-direction: row;
+  padding: 24rpx;
+  background: #fff;
+  justify-content: space-between;
+  border-bottom: 20rpx solid #eee;
+}
+
+.top-Nav2-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 339rpx;
+  height: 160rpx;
+  border-radius: 8rpx;
+  background-image: url(http://wx2.sinaimg.cn/mw690/d0cdcf72gy1fxkemocghrj209f04gmx2.jpg);
+  background-size:100%;
+}
+
+.top-Nav2-item2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 339rpx;
+  height: 160rpx;
+  border-radius: 8rpx;
+  background-image: url(http://wx2.sinaimg.cn/mw690/d0cdcf72gy1fxkemkkrkbj209f04g3yp.jpg);
+  background-size:100%;
+}
+
+.top-Nav2-item-word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 20rpx;
+  font-size: 24rpx;
+  font-weight: 500;
+  height: 60rpx;
+  width: 200rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  border: 1rpx #c4c4c4 solid;
 }

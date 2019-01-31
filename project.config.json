@@ -5,13 +5,12 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true,
-		"nodeModules": true
+		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.0",
+	"libVersion": "2.4.0",
 	"appid": "wx2bc302a282b5c4ae",
-	"projectname": "%E8%9C%B7%E7%BC%A9%E7%9A%84%E8%9C%97%E7%89%9B",
+	"projectname": "%22%E5%AE%88%E6%9C%9B%E8%BD%A9%22%E7%BD%91%E7%AB%99%E5%B0%8F%E7%A8%8B%E5%BA%8F",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -41,7 +40,7 @@
 				{
 					"name": "test",
 					"pathName": "COMPONENT/music",
-					"query": "a=",
+					"query": "a=哈哈",
 					"scene": 1044,
 					"shareInfo": {},
 					"referrerInfo": {}

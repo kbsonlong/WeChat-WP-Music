@@ -1,80 +1,29 @@
 /*
  * 
  * WordPres版微信小程序
- * Original author: jianbo
- * Secondary development：蜷缩的蜗牛 www.alongparty.cn
- * 技术支持微信号：蜷缩的蜗牛
+ * author: kbsonlong
+ * organization: 蜷缩的蜗牛  www.alongparty.cn
+ * github:    https://github.com/kbsonlong/WeChat-WP-Music
+ * 技术支持微信号：kbsonlong
  * 开源协议：MIT
- * Copyright (c) 2017 https://www.alongparty.cn All rights reserved.
- *
+ * 
  */
- 
-@import "../../utils/prism.wxss";
 @import "../../wxParse/wxParse.wxss";
 @import "../../templates/modal-view/modal-view.wxss";
-@import "../../app.wxss";
 
-.fd {
-  position: relative;
-  padding:24rpx;
-  background-color:#ffffff;
-  /*box-shadow:2rpx 4rpx 40rpx #c2c2c2;*/
-  z-index:999;
-  margin-top:-30rpx;
-  /*margin-bottom:24rpx;
-  margin-left:24rpx;
-  margin-right:24rpx;*/
-  border-radius: 30rpx 30rpx 0 0;
-}
-
-.icon-fd {
-  position:fixed;
-  width:100%;
-  height:100rpx;
-  bottom:0;
-  background:#fff;
-  z-index:999;
-  /*box-shadow:2rpx 4rpx 20rpx #ececec;*/
-  border-top: 2rpx solid #eee;
-}
-
-.thum-mask {
-  position: relative;
-  width: 100%;
-  height: 400rpx;
-}
-
-.thum-mask:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.35;
-    background: #191919;
-}
-
-.img-mask {
-  width:100%;
-  height:400rpx;
-}
 .content-article-detail {
-  margin: 0rpx;
-  padding: 48rpx 6rpx 0;
+  border-bottom: 1px solid #eee;
+  margin-top: 40rpx;
+  margin-bottom: 24px;
 }
 
 .entry-title {
-  font-size: 36rpx;
+  font-size: 48rpx;
   line-height: 1.6;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-weight: bold;
   outline: none;
   color: #3a4040;
-  margin-bottom: 28rpx; 
+  margin-bottom: 24rpx; 
 }
 
 .entry-gap-like {
@@ -84,17 +33,16 @@
   margin-bottom: 32rpx;
 }
 .entry-gap-zan {
-  width: 120rpx;
+  width: 70rpx;
   height: 2px;
   background-color: #4c4c4c;
   margin-bottom: 32rpx;
 }
 
 .entry-summary {
-  font-size: 30rpx;
-  line-height: 50rpx;
-  color:#636363;
-  letter-spacing: 0.5rpx;
+  font-size: 32rpx;
+  line-height: 64rpx;
+  letter-spacing: 1px;
 }
 
 .entry-summary image {
@@ -102,12 +50,15 @@
 }
 
 .entry-date {
-  font-size: 26rpx;
+  font-size: 24rpx;
   line-height: 1.6;
   color: #959595;
   font-weight: normal;
   outline: none;
   margin-bottom: 30rpx;
+  border-bottom:1px solid #eee;
+
+  /* border-bottom: 1px solid #ededed; *//* margin-left: 30rpx; */
 }
 
 .entry-date-text {
@@ -144,7 +95,7 @@
 
 .comment {
   /* border-bottom: 8px solid #fff; */
-  /* background-color: #f5f7f7; */
+  background-color: #f5f7f7;
   padding: 0 24rpx;
   border-radius: 8px;
   margin: 8px 0;
@@ -332,7 +283,7 @@
   perspective-origin: top center;
   transition: all ease-in-out 0.3s;
   */
-  height: 44rpx;
+  height: 48rpx;
   width: 48rpx;
 }
 
@@ -356,7 +307,7 @@
 .relatedPost {
   position: relative;
   text-align: left;
-  margin: 32rpx 0 100rpx;
+  margin: 32rpx 0 60rpx;
   /* border-bottom: 1px solid #eee; */
 }
 
@@ -366,27 +317,9 @@
   line-height: 40rpx;
   margin-top: 20rpx;
   margin-bottom: 20rpx;
-  font-size: 34rpx;
-  color: #3b3b3b !important;
-  border-left:10rpx solid #ea5455;
-  padding-left: 20rpx;
+  font-size: 32rpx;
+  color: #4c4c4c !important;
 }
-
-/*.relatedTitle::before {
-  content: "||";
-  font-size: 16rpx;
-  font-weight: 900;
-  color: #BB4E55;
-  vertical-align: 8rpx;
-}
-
-.relatedTitle::after {
-  content: "||";
-  font-size: 16rpx;
-  font-weight: 900;
-  color: #BB4E55;
-  vertical-align: 8rpx;
-}*/
 
 .relatedText {
   text-align: left;
@@ -394,8 +327,6 @@
   font-size: 28rpx;
   line-height: 60rpx;
   color: #4c4c4c !important;
-  text-overflow:ellipsis;
-  overflow:hidden;
 }
 
 .likePost {
@@ -403,23 +334,7 @@
   text-align: left;
   margin-top: 30rpx;
   /* border-bottom: 1px solid #ededed; */
-  margin-bottom: 30rpx;
-}
-
-.likePost .likebtt {
-  width:auto;
-  min-width:200rpx;
-  height:60rpx;
-  line-height:56rpx;
-  border-radius:50rpx;
-  border:1px solid #BB4E55;
-  text-align:center;
-  margin:0 35% 40rpx;
-}
-
-.likePost .likebtt text {
-  font-size:26rpx;
-  color:#BB4E55;
+  margin-bottom: 60rpx;
 }
 
 .likeTitle {
@@ -451,7 +366,7 @@
   font-size: 26rpx;
   line-height: 30rpx;
   color: #0000fe !important;
-  margin: 30rpx 0 20rpx;
+  margin: 140rpx 0 20rpx;
 }
 
 .img-like {
@@ -571,7 +486,7 @@
   border-radius: 3px !important;
   color: #eb2226 !important;
   background-color: #f9f2f4 !important;
-  font-family: Microsoft YaHei, Helvetica, Source Code Pro, Consolas, Menlo, Monaco, Courier New, monospace !important;
+  font-family: Source Code Pro, Consolas, Menlo, Monaco, Courier New, monospace !important;
 }
 
 /*   menu-box      */
@@ -596,18 +511,17 @@
 
 .iconList {
   text-align: center;
+  border-top: 1px solid #eee;
 }
 
 .iconLine {
-  margin-top: 24rpx;
+  margin-top: 20rpx;
 }
 
 .iconLine text {
   font-size: 24rpx;
   text-align: center;
-  color: #BB4E55;
-  /*margin-left: 8rpx;*/
-  vertical-align: 14rpx;
+  color: #959595;
 }
 
 .iconLine view {

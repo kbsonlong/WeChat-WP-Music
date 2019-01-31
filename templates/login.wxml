@@ -1,10 +1,10 @@
 <!--templates/login.wxml-->
 
 <template name="login">
-    <block wx:if="{{userInfo == null || userInfo == ''}}">
+    <block wx:if="{{!userInfo.isLogin}}">
         <button class="login-btn" open-type="getUserInfo" bindgetuserinfo="agreeGetUser">
             <view class="login-inner">
-                <!--<image class="avatar" src="../../images/gravatar.png"></image>-->
+                <image class="avatar" src="../../images/gravatar.png"></image>
                 <view class="username">
                     <text>请点击登录</text>
                 </view>

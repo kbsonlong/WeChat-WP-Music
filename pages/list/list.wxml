@@ -2,9 +2,10 @@
 /*
  * 
  * WordPres版微信小程序
- * Original author: jianbo
- * Secondary development：蜷缩的蜗牛 www.alongparty.cn
- * 技术支持微信号：蜷缩的蜗牛
+ * author: kbsonlong
+ * organization: 蜷缩的蜗牛  www.alongparty.cn
+ * github:    https://github.com/kbsonlong/WeChat-WP-Music
+ * 技术支持微信号：kbsonlong
  * 开源协议：MIT
  * Copyright (c) 2017 https://www.alongparty.cn All rights reserved.
  *
@@ -16,11 +17,7 @@
 
     <view class="topic-common-list" style="display:{{isCategoryPage}}">
       <view class="topic-list-item">
-        <!-- 默认调取网站分类图像作为背景图 -->
-        <image src="{{categoriesImage}}" mode="aspectFill" class="no-cover">
-        </image>
-        <!-- 指定纯色背景图作为背景图 -->
-        <!--image src="../../images/website-search.png" class="no-cover">
+        <image src="{{categoriesImage}}" class="cover">
         </image>
         <view class="topic-content-title">
           <text>{{categoriesList.name}}</text>
@@ -28,16 +25,16 @@
         <view class="topic-content-title-line"></view>
         <view class="topic-content-brief">
           <text>{{categoriesList.description}}</text>
-        </view> -->
+        </view>
       </view>
     </view>
 
 
     <view class="topic-common-list" style="display:{{isSearchPage}}">
-      <view class="topic-list-item" style='background:#222'>
-        <!--view>
-          <image src="../../images/website-search.png" class="no-cover"></image>
-        </view-->
+      <view class="topic-list-item">
+        <view>
+          <image src="../../images/website-search.png" class="cover"></image>
+        </view>
         <view class="topic-content-title">
           <text>搜索关键字：</text>
           <text class="searchKey">{{searchKey}}</text>
@@ -75,7 +72,7 @@
         </view>
 -->
 
-        <view class="no-more" hidden="{{!isLastPage}}">- 无更多文章 -</view>
+        <view class="no-more" hidden="{{!isLastPage}}">----------无更多文章...---------</view>
 
       </view>
 

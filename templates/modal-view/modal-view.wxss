@@ -15,19 +15,15 @@
   color: #fff;
 }
 .modal-dialog {
-  width: 85%;
-  height: 90%;
+  width: 640rpx;
+  height: 94%;
   overflow: hidden;
   position: fixed;
-  top: 20%;
+  top: 18%;
   left: 0;
   z-index: 9999;
-  background: #f9f9f9;
-  margin: -180rpx 65rpx;
-  border-radius: 20rpx;
-  /* background-image: url(https://www.alongparty.cn/wp-content/uploads/2018/08/2018081217394674.jpg);
-  background-size: cover;
-  background-position: center center; */
+  background: none;
+  margin: -180rpx 55rpx;
 }
 .modal-title {
   padding-top: 50rpx;
@@ -36,8 +32,8 @@
   text-align: center;
 }
 .modal-content {
-  padding: 60rpx 32rpx 40rpx 32rpx;
-  border-radius: 20rpx;
+  padding: 0;
+  border-radius: 0;
 }
 .modal-input,.modal-input_solo,.modal-input_hd,.modal-input_bd,.modal-input_ft {
   display: flex;
@@ -46,10 +42,16 @@
 }
 .modal-input_solo {
   margin: 0 auto; 
-  border: 2rpx solid #ddd;
+  /* border: 2rpx solid #ddd;
   width: 80%;
-  border-radius: 20rpx;
+  border-radius: 20rpx; */
 }
+
+.modal-input_solo image {
+  width: 100%;
+  height: 1000rpx;
+}
+
 .modal-input_hd{
   border-top: 2rpx solid #ddd;
   border-left: 2rpx solid #ddd;
@@ -96,12 +98,12 @@
 .modal-footer {
   display: flex;
   flex-direction: row;
-  height: 86rpx;
-  border-top: 1px solid #dedede;
+  justify-content: center;
+  height: 100rpx;
+  /* border-top: 1px solid #dedede; */
   font-size: 30rpx;
   line-height: 86rpx;
-  margin-top:60rpx;
-
+  margin-top:0;
 }
 .btn-cancel {
   width: 50%;
@@ -110,7 +112,17 @@
   border-right: 1px solid #dedede;
 }
 .btn-confirm {
-  width: 50%;
-  color: #3cc51f;
+  width: 640rpx;
+  height: 88rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #959595;
+  background-color: #fff;
   text-align: center;
+  /* border-radius: 36rpx;
+  border: 1rpx solid #c4c4c4; */
+  margin-top: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

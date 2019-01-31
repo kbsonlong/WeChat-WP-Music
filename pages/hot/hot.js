@@ -1,12 +1,13 @@
 /*
  * 
  * WordPres版微信小程序
- * Original author: jianbo
- * Secondary development：蜷缩的蜗牛 www.alongparty.cn
- * 技术支持微信号：蜷缩的蜗牛
+ * author: kbsonlong
+ * organization: 蜷缩的蜗牛  www.alongparty.cn
+ * github:    https://github.com/kbsonlong/WeChat-WP-Music
+ * 技术支持微信号：kbsonlong
  * 开源协议：MIT
- * Copyright (c) 2017 https://www.alongparty.cn All rights reserved.
- *
+ * 
+ *  *Copyright (c) 2017 https://www.alongparty.cn All rights reserved.
  */
 
 var Api = require('../../utils/api.js');
@@ -40,8 +41,10 @@ Page({
     searchKey:"",
     topBarItems: [
         // id name selected 选中状态
-        { id: '1', name: '浏览数', selected: true },        
-        { id: '2', name: '点赞数', selected: false },
+        { id: '1', name: '评论数', selected: true },
+        { id: '2', name: '浏览数', selected: false },        
+        { id: '3', name: '点赞数', selected: false },
+        { id: '4', name: '鼓励数', selected: false }
     ],
     tab: '1',
 

@@ -1,14 +1,14 @@
 /*
  * 
  * WordPres版微信小程序
- * Original author: jianbo
- * Secondary development：蜷缩的蜗牛 www.alongparty.cn
- * 技术支持微信号：蜷缩的蜗牛
+ * author: kbsonlong
+ * organization: 蜷缩的蜗牛  www.alongparty.cn
+ * github:    https://github.com/kbsonlong/WeChat-WP-Music
+ * 技术支持微信号：kbsonlong
  * 开源协议：MIT
- * Copyright (c) 2017 https://www.alongparty.cn All rights reserved.
- *
+ *  *Copyright (c) 2017 https://www.alongparty.cn All rights reserved.
+ * 
  */
-
 function wxPromisify(fn) {
   return function (obj = {}) {
     return new Promise((resolve, reject) => {
